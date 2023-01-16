@@ -1,5 +1,6 @@
 import url from 'node:url';
 import path from 'node:path';
+const {ZebrunnerReporter, ZebrunnerService} = require('javascript-agent-wdio');
 
 import { hooks } from './src/support/hooks.js';
 
@@ -133,7 +134,18 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: [
+        [
+            ZebrunnerReporter, 
+            {}
+        ],
+        'spec'
+    ],
+    services: [
+        [
+            ZebrunnerService
+        ]
+    ],
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
