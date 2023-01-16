@@ -1,6 +1,6 @@
 import url from 'node:url';
 import path from 'node:path';
-const {ZebrunnerReporter, ZebrunnerService} = require('javascript-agent-wdio');
+import {ZebrunnerReporter, ZebrunnerService} from 'javascript-agent-wdio';
 
 import { hooks } from './src/support/hooks.js';
 
