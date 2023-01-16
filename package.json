@@ -31,7 +31,7 @@
     "test:lint": "eslint 'src/**/*.ts' 'test/**/*.js!(setup.js)'",
     "test:unit": "jest --config=jest.config.cjs --detectOpenHandles",
     "test:features": "node --loader ts-node/esm ./node_modules/.bin/wdio run wdio.BUILD.conf.ts",
-    "wdio": "node --loader ts-node/esm ./node_modules/.bin/wdio run wdio.BUILD.conf.ts"
+    "wdio": "node --loader ts-node/esm ./node_modules/.bin/wdio run wdio.conf.ts"
   },
   "devDependencies": {
     "@types/jest": "^29.2.4",
