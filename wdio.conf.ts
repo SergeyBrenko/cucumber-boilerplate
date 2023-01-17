@@ -144,6 +144,15 @@ export const config: WebdriverIO.Config = {
     services: [
         [
             ZebrunnerService
+        ],
+        [
+            'static-server',
+            {
+                port: 8080,
+                folders: [
+                    { mount: '/', path: path.join(dirname, 'demo-app') },
+                ],
+            }
         ]
     ],
     //
